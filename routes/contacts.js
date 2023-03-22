@@ -3,9 +3,9 @@ let router = express.Router();
 
 let contactsController = require('../controllers/contacts')
 
-router.get('/contacts', contactsController.getList)
-router.get('/contacts/:id', contactsController.getContactsById) 
-router.post('/contacts', contactsController.postContacts)
+router.get('/contacts', contactsController.list)
+router.get('/contacts/:id', contactsController.show) 
+router.post('/contacts', contactsController.create)
 
 
 

@@ -3,9 +3,9 @@ let router = express.Router();
 
 let commentsController = require('../controllers/comments')
 
-router.get('/comments', commentsController.getList)
-router.get('/comments/:id', commentsController.getCommentsById) 
-router.post('/comments', commentsController.postComments)
+router.get('/comments', commentsController.list)
+router.get('/comments/:id', commentsController.show) 
+router.post('/comments', commentsController.create)
 
 
 

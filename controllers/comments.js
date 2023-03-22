@@ -1,10 +1,10 @@
 const comments = require('../data/comments')
 
-const getList = (req, res) => {
+const list = (req, res) => {
     res.json(comments)
 }
 
-const getCommentsById = (req,res) => {
+const show = (req,res) => {
 
     let myId = req.params.id;
 
@@ -18,7 +18,7 @@ const getCommentsById = (req,res) => {
     }
 }
 
-const postComments = (req, res) => {
+const create = (req, res) => {
     //reference data file to find what "description" is
     //to create new info. 
     let newItem = {};
@@ -33,4 +33,4 @@ const postComments = (req, res) => {
 
 
 
-module.exports = {getList, getCommentsById, postComments}
+module.exports = {list, show, create}

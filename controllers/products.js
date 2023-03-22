@@ -1,10 +1,10 @@
 const products = require('../data/products')
 
-const getList = (req, res) => {
+const list = (req, res) => {
     res.json(products)
 }
 
-const getProductsById = (req,res) => {
+const show = (req,res) => {
 
     let myId = req.params.id;
 
@@ -18,7 +18,7 @@ const getProductsById = (req,res) => {
     }
 }
 
-const postProducts = (req, res) => {
+const create = (req, res) => {
     //reference data file to find what "description" is
     //to create new info. 
     let newItem = {};
@@ -34,4 +34,4 @@ const postProducts = (req, res) => {
 
 
 
-module.exports = {getList, getProductsById, postProducts}
+module.exports = {list, show, create}

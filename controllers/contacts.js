@@ -1,10 +1,10 @@
 const contacts = require('../data/contacts')
 
-const getList = (req, res) => {
+const list = (req, res) => {
     res.json(contacts)
 }
 
-const getContactsById = (req,res) => {
+const show = (req,res) => {
 
     let myId = req.params.id;
 
@@ -18,7 +18,7 @@ const getContactsById = (req,res) => {
     }
 }
 
-const postContacts = (req, res) => {
+const create = (req, res) => {
     //reference data file to find what "description" is
     //to create new info. 
     let newItem = {};
@@ -35,4 +35,4 @@ const postContacts = (req, res) => {
 
 
 
-module.exports = {getList, getContactsById, postContacts}
+module.exports = {list, show, create}

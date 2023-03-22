@@ -1,10 +1,10 @@
 const vehicles = require('../data/vehicles')
 
-const getList = (req, res) => {
+const list = (req, res) => {
     res.json(vehicles)
 }
 
-const getVehiclesById = (req,res) => {
+const show = (req,res) => {
 
     let myId = req.params.id;
 
@@ -18,7 +18,7 @@ const getVehiclesById = (req,res) => {
     }
 }
 
-const postVehicles = (req, res) => {
+const create = (req, res) => {
     //reference data file to find what "description" is
     //to create new info. 
     let newItem = {};
@@ -35,4 +35,4 @@ const postVehicles = (req, res) => {
 
 
 
-module.exports = {getList, getVehiclesById, postVehicles}
+module.exports = {list, show, create}
