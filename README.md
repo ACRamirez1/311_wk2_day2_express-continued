@@ -100,7 +100,8 @@ Once completed, the web page should be able to list out the information, create 
   * We will make three functions in each file: "list", "show" and "create"
     * You should be able to determine which is which, for example the GET routes will be "list" and "show"
   * Export the functions at the end like:
-    *  `module.exports = { list, show, create }`
+    *  `module.exports = 
+    { list, show, create }` list = get, show = get by id, and create = post
 * Import and use the controller functions in the appropriate router
   * Ex. `app.get('/comments', commentController.list)`
 * When complete your routes files should look like this:
